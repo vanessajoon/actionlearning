@@ -19,7 +19,7 @@ jobs:
         needs: Build
         steps:
             - name: Code checkout
-              uses: actions/checkout@v16
+              uses: actions/checkout@v4
 
             - name: Run tests on main branch
               run: mvn test
