@@ -19,10 +19,10 @@ jobs:
         needs: Build
         steps:
             - name: Code checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v16
 
             - name: Run tests on main branch
-              run: mvn test
+              run: maven test
 
             - name: Checkstyle
               run: mvn checkstyle:checkstyle
