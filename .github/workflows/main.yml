@@ -1,6 +1,9 @@
 name: Learning GitActions
 on:
-    push:
+    # push:
+    #     branches:
+    #         - main
+    pull_request:
         branches:
             - main
         
@@ -10,6 +13,8 @@ jobs:
         steps:
             - name: Code checkout
               uses: actions/checkout@v4
+              with:
+                fetch-depth: 0
 
             - name: Maven Build
               run: mvn install
