@@ -1,11 +1,15 @@
 name: Learning GitActions
 on:
-    # push:
-    #     branches:
-    #         - main
+    push:
+        branches:
+            - main
+
     pull_request:
         branches:
             - main
+    
+    schedule:
+      - cron: "10 14 * * 1-5"
         
 jobs:
     Build:
